@@ -52,4 +52,3 @@ Plug 'kylef/apiblueprint.vim'
 " CQL
 Plug 'veegee/cql-vim'
 
-"

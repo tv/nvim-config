@@ -2,9 +2,6 @@
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
     set background=dark
 
-    "let g:solarized_termcolors=256
-    "let g:solarized_termcolors=16
-    "color solarized
     colorscheme gruvbox
 " }
 " dash {
