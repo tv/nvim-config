@@ -2,7 +2,24 @@
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
     set background=dark
 
+    let g:gruvbox_contrast_dark="medium"
+    let g:gruvbox_italic=1
+
     colorscheme gruvbox
+    nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+" }
+" rainbow_parentheses {
+    let g:rainbow_active = 1
+" }
+" neomake {
+"   Filetype specific changes at the bottom of the file
+    autocmd! BufWritePost * Neomake
+" }
+" deoplete {
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#auto_completion_start_length = 1
+    let g:deoplete#enable_ignore_case = 1
+    let g:deoplete#enable_auto_close_preview = 1
 " }
 " dash {
     nnoremap <silent><buffer> K <esc>:Dash<CR>
@@ -48,6 +65,7 @@
 " }
 
 " FZF {
+    let FZF_DEFAULT_COMMAND='ag -g ""' 
     let g:fzf_action = {
       \ 'ctrl-s': 'split',
       \ 'ctrl-v': 'vsplit'
@@ -71,7 +89,13 @@
 
 " Filetypes {
 "   JS {
-        let g:syntastic_javascript_checkers = ['eslint']
+        let g:neomake_javascript_enabled_makers = ['eslint']
+        autocmd FileType javascript setlocal omnifunc=tern#Complete 
+"   }
+"   Java {
+        autocmd FileType java setlocal omnifunc=javacomplete#Complete
+        nmap <F4> <Plug>(JavaComplete-Imports-Add)
+        imap <F4> <Plug>(JavaComplete-Imports-Add)
 "   }
 "   Gradle {
         autocmd BufNewFile,BufRead *.gradle setfiletype groovy
@@ -83,11 +107,15 @@
         autocmd BufNewFile,BufRead *.scss set filetype=scss.css
 "   }
 "   Golang {
-        let g:go_highlight_functions = 1
-        let g:go_highlight_methods = 1
-        let g:go_highlight_structs = 1
-        let g:go_highlight_operators = 1
-        let g:go_highlight_build_constraints = 1
+        autocmd BufNewFile,BufRead *.go setfiletype go
+        au FileType go set noexpandtab
+
+        "let g:go_highlight_functions = 1
+        "let g:go_highlight_methods = 1
+        "let g:go_highlight_structs = 1
+        "let g:go_highlight_interfaces = 1
+        "let g:go_highlight_operators = 1
+        "let g:go_highlight_build_constraints = 1
 
         let g:tagbar_type_go = {
         \ 'ctagstype' : 'go',
@@ -117,7 +145,16 @@
         \ 'ctagsargs' : '-sort -silent'
         \ }
 
-        au FileType go set noexpandtab
         nmap <C-b> <Plug>LLBreakSwitch
+
+        let g:deoplete#sources#go#align_class = 1
+
+        au FileType go nmap <leader>rt <Plug>(go-run-tab)
+        au FileType go nmap <Leader>rs <Plug>(go-run-split)
+        au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
+"   }
+"
+"   Rust {
+        "let g:racer_cmd = "~/.cargo/bin/racer" 
 "   }
 " }

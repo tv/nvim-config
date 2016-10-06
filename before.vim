@@ -3,6 +3,9 @@ set mouse=a
 set mousehide               " Hide the mouse cursor while typing
 scriptencoding utf-8
 
+let g:python_host_prog = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 let s:uname = system("uname")
 
 if has ('x') && has ('gui') " On Linux use + register for copy-paste
@@ -54,15 +57,16 @@ highlight clear SignColumn      " SignColumn should match background for
                                 " things like vim-gitgutter
 
 
+set colorcolumn=90
 set nu                          " Line numbers on
 set showmatch                   " Show matching brackets/parenthesis
 set scrolljump=5                " Lines to scroll when cursor leaves screen
 set scrolloff=3                 " Minimum lines to keep above and below cursor
 set autoindent                  " Indent at the same level of the previous line
-set shiftwidth=4                " Use indents of 4 spaces
+set shiftwidth=2                " Use indents of 4 spaces
 set expandtab                   " Tabs are spaces, not tabs
-set tabstop=4                   " An indentation every four columns
-set softtabstop=4               " Let backspace delete indent
+set tabstop=2                   " An indentation every four columns
+set softtabstop=2               " Let backspace delete indent
 set timeoutlen=1000 ttimeoutlen=0
 
 " Map leader to ,

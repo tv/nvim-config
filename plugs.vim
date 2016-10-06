@@ -1,11 +1,36 @@
 Plug 'tpope/vim-sensible'
-Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'luochen1990/rainbow'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'junegunn/goyo.vim'
+Plug 'terryma/vim-multiple-cursors'
+
+Plug 'tpope/vim-surround'
+Plug 'majutsushi/tagbar'
+Plug 'easymotion/vim-easymotion'
+Plug 'benekastah/neomake'
+Plug 'matze/vim-move'
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " JavaScript
 Plug 'othree/yajs.vim'
-Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
+Plug 'ternjs/tern_for_vim',      { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jspc.vim',          { 'for': ['javascript', 'javascript.jsx'] }
+
+" Java
+Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 
 " JSON
 Plug 'elzr/vim-json', { 'for': 'json' }
@@ -22,29 +47,22 @@ Plug 'avakhov/vim-yaml', { 'for': 'yaml' }
 " This is installed from homebrew already
 Plug 'junegunn/fzf.vim'
 
-" Colors
-Plug 'altercation/vim-colors-solarized'
-
-"Misc
-Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'bling/vim-airline'
-Plug 'junegunn/goyo.vim'
+" Color
+Plug 'morhetz/gruvbox'
 
 " Golang
-Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'critiqjo/lldb.nvim'
+Plug 'fatih/vim-go', { 'for': 'golang' }
+Plug 'zchee/deoplete-go', { 'for': 'golang', 'do': 'make'}
 
+" Presefy ng-stack things
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
-" Common
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-Plug 'majutsushi/tagbar'
-Plug 'easymotion/vim-easymotion'
-Plug 'benekastah/neomake'
-Plug 'rizzatti/dash.vim'
-Plug 'matze/vim-move'
+" Rust
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 
+" Scala
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
 " Api Blueprint
 Plug 'kylef/apiblueprint.vim'
@@ -52,3 +70,11 @@ Plug 'kylef/apiblueprint.vim'
 " CQL
 Plug 'veegee/cql-vim'
 
+" Haskell
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+
+" GLSL
+Plug 'tikhomirov/vim-glsl'
+
+" Ansible
+Plug 'chase/vim-ansible-yaml'
