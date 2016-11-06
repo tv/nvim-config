@@ -1,14 +1,14 @@
 " Before
-source ~/.nvim/before.vim
+source before.vim
 
-call plug#begin('~/.nvim/plugged')
-source ~/.nvim/plugs.vim
+call plug#begin('plugged')
+source plugs.vim
 call plug#end()
 
 set rtp+=/usr/local/Cellar/fzf/HEAD
 
 " After
-source ~/.nvim/after.vim
+source after.vim
 
 " Host specific configs
 if filereadable(glob("~/.vimrc.local")) 
