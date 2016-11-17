@@ -5,7 +5,8 @@
     let g:gruvbox_contrast_dark="medium"
     let g:gruvbox_italic=1
 
-    colorscheme gruvbox
+    colorscheme solarized
+    "colorscheme gruvbox
     nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " }
 " rainbow_parentheses {

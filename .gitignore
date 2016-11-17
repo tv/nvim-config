@@ -3,3 +3,4 @@ autoload
 backup
 plugged
 spell
+.netrwhist

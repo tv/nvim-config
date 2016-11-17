@@ -43,16 +43,16 @@ Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 Plug 'avakhov/vim-yaml', { 'for': 'yaml' }
 
 " Changing files
-" Plug 'junegunn/fzf', { 'do': 'yes \| ./install' }
-" This is installed from homebrew already
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Color
 Plug 'morhetz/gruvbox'
+Plug 'arakashic/nvim-colors-solarized'
 
 " Golang
-Plug 'fatih/vim-go', { 'for': 'golang' }
-Plug 'zchee/deoplete-go', { 'for': 'golang', 'do': 'make'}
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 
 " Presefy ng-stack things
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
