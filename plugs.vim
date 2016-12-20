@@ -3,10 +3,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'itchyny/lightline.vim'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'luochen1990/rainbow'
 Plug 'editorconfig/editorconfig-vim'
@@ -49,6 +48,7 @@ Plug 'junegunn/fzf.vim'
 " Color
 Plug 'morhetz/gruvbox'
 Plug 'arakashic/nvim-colors-solarized'
+Plug 'jacoborus/tender.vim'
 
 " Golang
 Plug 'fatih/vim-go', { 'for': 'go' }

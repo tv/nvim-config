@@ -1,11 +1,23 @@
 " style {
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    if (has("termguicolors"))
+     set termguicolors
+    endif
     set background=dark
 
     let g:gruvbox_contrast_dark="medium"
     let g:gruvbox_italic=1
 
-    colorscheme solarized
+    colorscheme tender
+    let g:airline_theme = 'tenderplus'
+    let g:lightline = {
+      \ 'colorscheme': 'tenderplus',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"x":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
+    "colorscheme solarized
     "colorscheme gruvbox
     nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " }
