@@ -24,9 +24,13 @@ Plug 'honza/vim-snippets'
 
 " JavaScript
 Plug 'othree/yajs.vim'
-Plug 'ternjs/tern_for_vim',      { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/jspc.vim',          { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'ternjs/tern_for_vim',         { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'carlitux/deoplete-ternjs',    { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jspc.vim',             { 'for': ['javascript', 'javascript.jsx'] }
+
+" TypeScript
+Plug 'HerringtonDarkholme/yats.vim',    { 'for': ['typescript'] }
+Plug 'mhartington/deoplete-typescript', { 'for': ['typescript'] }
 
 " Java
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }

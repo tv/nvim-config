@@ -1,7 +1,10 @@
 " style {
-    if (has("termguicolors"))
-     set termguicolors
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+    if has("termguicolors")
+      set termguicolors
     endif
+
     set background=dark
 
     let g:gruvbox_contrast_dark="medium"
@@ -118,6 +121,10 @@
 "   }
 "   SCSS {
         autocmd BufNewFile,BufRead *.scss set filetype=scss.css
+"   }
+"   YAML -> ansible {
+        autocmd BufNewFile,BufRead *.yml setfiletype ansible
+        autocmd BufNewFile,BufRead *.yaml setfiletype ansible
 "   }
 "   Golang {
         autocmd BufNewFile,BufRead *.go setfiletype go
