@@ -106,7 +106,11 @@
 " Filetypes {
 "   JS {
         let g:neomake_javascript_enabled_makers = ['eslint']
+        au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
         autocmd FileType javascript setlocal omnifunc=tern#Complete 
+"   }
+"   Rust {
+        let g:neomake_rust_enabled_makers = []
 "   }
 "   Java {
         autocmd FileType java setlocal omnifunc=javacomplete#Complete

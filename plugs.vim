@@ -1,4 +1,3 @@
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
@@ -23,14 +22,15 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " JavaScript
+Plug 'jaawerth/nrun.vim'
 Plug 'othree/yajs.vim'
 Plug 'ternjs/tern_for_vim',         { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs',    { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim',             { 'for': ['javascript', 'javascript.jsx'] }
 
 " TypeScript
-Plug 'HerringtonDarkholme/yats.vim',    { 'for': ['typescript'] }
-Plug 'mhartington/deoplete-typescript', { 'for': ['typescript'] }
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript'
 
 " Java
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
@@ -82,3 +82,6 @@ Plug 'tikhomirov/vim-glsl'
 
 " Ansible
 Plug 'chase/vim-ansible-yaml'
+
+" Systemd
+Plug 'towolf/systemd-vim-syntax'
