@@ -118,6 +118,7 @@
 "   }
 "   Rust {
         let g:neomake_rust_enabled_makers = []
+        au BufEnter *.rs  set colorcolumn=120
 "   }
 "   Java {
         autocmd FileType java setlocal omnifunc=javacomplete#Complete
