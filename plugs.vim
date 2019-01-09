@@ -1,16 +1,16 @@
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
-
 Plug 'itchyny/lightline.vim'
-
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 Plug 'luochen1990/rainbow'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
+
+" Focused writing
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
@@ -24,8 +24,7 @@ Plug 'honza/vim-snippets'
 " JavaScript
 Plug 'jaawerth/nrun.vim'
 Plug 'othree/yajs.vim'
-Plug 'ternjs/tern_for_vim',         { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs',    { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'carlitux/deoplete-ternjs',    { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' }
 Plug 'othree/jspc.vim',             { 'for': ['javascript', 'javascript.jsx'] }
 
 " TypeScript
@@ -53,9 +52,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'arakashic/nvim-colors-solarized'
 Plug 'jacoborus/tender.vim'
+Plug 'ayu-theme/ayu-vim'
 
 " Golang
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } ", { 'for': 'go' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 
 " Presefy ng-stack things
@@ -85,3 +85,6 @@ Plug 'chase/vim-ansible-yaml'
 
 " Systemd
 Plug 'towolf/systemd-vim-syntax'
+
+" Dockerfile
+Plug 'ekalinin/Dockerfile.vim'

@@ -10,7 +10,9 @@
     let g:gruvbox_contrast_dark="medium"
     let g:gruvbox_italic=1
 
-    colorscheme tender
+    let ayucolor="mirage"
+    colorscheme ayu
+
     let g:airline_theme = 'tenderplus'
     let g:lightline = {
       \ 'colorscheme': 'tenderplus',
@@ -76,8 +78,10 @@
     vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 " }
 " Goyo {
-    nmap <Leader>d :Goyo<CR>
-    vmap <Leader>d :Goyo<CR>
+    nmap <Leader>d :Goyo 100<CR>
+    vmap <Leader>d :Goyo 100<CR>
+    autocmd! User GoyoEnter Limelight
+    autocmd! User GoyoLeave Limelight!
 " }
 
 " FZF {
@@ -87,6 +91,8 @@
       \ 'ctrl-v': 'vsplit'
       \ }
     map <c-p> :FZF<CR>
+
+    nnoremap <leader>e :call fzf#vim#ag(expand('<cword>'))<cr>
 " }
 
 
@@ -107,7 +113,8 @@
 "   JS {
         let g:neomake_javascript_enabled_makers = ['eslint']
         au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
-        autocmd FileType javascript setlocal omnifunc=tern#Complete 
+        let g:deoplete#sources#ternjs#tern_bin = '~/.nvm/versions/node/v8.4.0/bin/tern'
+        let g:deoplete#sources#ternjs#timeout = 1
 "   }
 "   Rust {
         let g:neomake_rust_enabled_makers = []
@@ -134,12 +141,12 @@
         autocmd BufNewFile,BufRead *.go setfiletype go
         au FileType go set noexpandtab
 
-        "let g:go_highlight_functions = 1
-        "let g:go_highlight_methods = 1
-        "let g:go_highlight_structs = 1
-        "let g:go_highlight_interfaces = 1
-        "let g:go_highlight_operators = 1
-        "let g:go_highlight_build_constraints = 1
+        let g:go_highlight_functions = 1
+        let g:go_highlight_methods = 1
+        let g:go_highlight_structs = 1
+        let g:go_highlight_interfaces = 1
+        let g:go_highlight_operators = 1
+        let g:go_highlight_build_constraints = 1
 
         let g:tagbar_type_go = {
         \ 'ctagstype' : 'go',
@@ -176,6 +183,7 @@
         au FileType go nmap <leader>rt <Plug>(go-run-tab)
         au FileType go nmap <Leader>rs <Plug>(go-run-split)
         au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
+        au FileType go nmap <leader>g :GoDef<cr>
 "   }
 "
 "   Rust {
