@@ -7,6 +7,7 @@ Plug 'luochen1990/rainbow'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'sheerun/vim-polyglot'
 
 " Focused writing
 Plug 'junegunn/goyo.vim'
@@ -29,7 +30,7 @@ Plug 'othree/jspc.vim',             { 'for': ['javascript', 'javascript.jsx'] }
 
 " TypeScript
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " Java
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }

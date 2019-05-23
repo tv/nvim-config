@@ -78,8 +78,9 @@
     vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 " }
 " Goyo {
-    nmap <Leader>d :Goyo 100<CR>
-    vmap <Leader>d :Goyo 100<CR>
+    let g:goyo_width=100
+    nmap <Leader>d :Goyo<CR>
+    vmap <Leader>d :Goyo<CR>
     autocmd! User GoyoEnter Limelight
     autocmd! User GoyoLeave Limelight!
 " }
@@ -101,7 +102,7 @@
     nmap tb :TagbarToggle<cr>
 " }
 " Easymotion {
-    map <Leader> <Plug>(easymotion-prefix)
+    "map <Leader> <Plug>(easymotion-prefix)
 " }
 
 " Common {
@@ -185,6 +186,12 @@
         au FileType go nmap <Leader>rs <Plug>(go-run-split)
         au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
         au FileType go nmap <leader>g :GoDef<cr>
+
+        " Debugger bindings
+        au FileType go nmap <F1> :GoDebugBreakpoint<cr>
+        au FileType go nmap <F3> :GoDebugStart<cr>
+        au FileType go nmap <F4> :GoDebugTest<cr>
+        au Filetype go nmap <F2> :GoDebugStop<cr>
 "   }
 "
 "   Rust {
