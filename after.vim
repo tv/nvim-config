@@ -7,21 +7,22 @@
 
     set background=dark
 
-    let g:gruvbox_contrast_dark="medium"
-    let g:gruvbox_italic=1
+    "let g:gruvbox_contrast_dark="medium"
+    "let g:gruvbox_italic=1
 
-    let ayucolor="mirage"
-    colorscheme ayu
+    "let ayucolor="mirage"
+    colorscheme nord
 
-    let g:airline_theme = 'tenderplus'
-    let g:lightline = {
-      \ 'colorscheme': 'tenderplus',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"x":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '|', 'right': '|' }
-      \ }
+    let g:nord_cursor_line_number_background = 1
+    let g:airline_theme = 'nord'
+    "let g:lightline = {
+      "\ 'colorscheme': 'tenderplus',
+      "\ 'component': {
+      "\   'readonly': '%{&readonly?"x":""}',
+      "\ },
+      "\ 'separator': { 'left': '', 'right': '' },
+      "\ 'subseparator': { 'left': '|', 'right': '|' }
+      "\ }
     "colorscheme solarized
     "colorscheme gruvbox
     nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>

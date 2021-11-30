@@ -67,6 +67,9 @@ set tabstop=2                   " An indentation every four columns
 set softtabstop=2               " Let backspace delete indent
 set timeoutlen=1000 ttimeoutlen=0
 
+
+set list
+
 " Map leader to ,
 let mapleader = ','
 
