@@ -32,7 +32,7 @@ highlight clear SignColumn      " SignColumn should match background for
 
 
 set colorcolumn=90
-set nu                          " Line numbers on
+set nu rnu                      " Line numbers on
 set showmatch                   " Show matching brackets/parenthesis
 set scrolljump=5                " Lines to scroll when cursor leaves screen
 set scrolloff=3                 " Minimum lines to keep above and below cursor
