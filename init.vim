@@ -29,7 +29,8 @@ set cursorline                  " Highlight current line
 
 highlight clear SignColumn      " SignColumn should match background for
                                 " things like vim-gitgutter
-
+set ignorecase
+set smartcase
 
 set colorcolumn=90
 set nu rnu                      " Line numbers on
@@ -101,6 +102,7 @@ source ~/.config/nvim/plugins/goyo.vim
 source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/fugitive.vim
 source ~/.config/nvim/plugins/lightline.vim
+source ~/.config/nvim/plugins/language_server_protocol.vim
 source ~/.config/nvim/plugins/move.vim
 source ~/.config/nvim/plugins/multiple-cursors.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
