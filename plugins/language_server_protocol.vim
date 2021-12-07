@@ -1,6 +1,15 @@
 Plug 'neovim/nvim-lspconfig'
 
-"  brew install hashicorp/tap/terraform-ls
-autocmd User PlugLoaded lua require('lspconfig').terraform_lsp.setup{}
-autocmd User PlugLoaded lua require('lspconfig').dockerls.setup{}
-"require("lspconfig.health").check()
+func! Plugins_language_server_protocol()
+  lua << EOF
+local lspconfig = require('lspconfig')
+
+lspconfig.terraformls.setup{}
+lspconfig.dockerls.setup{}
+lspconfig.pylsp.setup{}
+lspconfig.yamlls.setup{}
+
+EOF
+endfunction
+
+autocmd! User PlugLoaded call Plugins_language_server_protocol()

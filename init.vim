@@ -104,6 +104,7 @@ source ~/.config/nvim/plugins/fugitive.vim
 source ~/.config/nvim/plugins/lightline.vim
 source ~/.config/nvim/plugins/language_server_protocol.vim
 source ~/.config/nvim/plugins/move.vim
+source ~/.config/nvim/plugins/markdown.vim
 source ~/.config/nvim/plugins/multiple-cursors.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
 source ~/.config/nvim/plugins/polyglot.vim
