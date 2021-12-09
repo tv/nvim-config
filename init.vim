@@ -43,6 +43,7 @@ set expandtab                   " Tabs are spaces, not tabs
 set tabstop=2                   " An indentation every four columns
 set softtabstop=2               " Let backspace delete indent
 set timeoutlen=1000 ttimeoutlen=0
+set signcolumn=yes:1
 
 set list
 set listchars=tab:▸\ ,trail:·
@@ -107,11 +108,13 @@ source ~/.config/nvim/plugins/move.vim
 source ~/.config/nvim/plugins/markdown.vim
 source ~/.config/nvim/plugins/multiple-cursors.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
+source ~/.config/nvim/plugins/nvim-cmp.vim
 source ~/.config/nvim/plugins/polyglot.vim
 source ~/.config/nvim/plugins/rainbow.vim
 source ~/.config/nvim/plugins/surround.vim
 source ~/.config/nvim/plugins/tabular.vim
 source ~/.config/nvim/plugins/tagbar.vim
+source ~/.config/nvim/plugins/terraform.vim
 source ~/.config/nvim/plugins/theme.vim
 
 "runtime plugs.vim

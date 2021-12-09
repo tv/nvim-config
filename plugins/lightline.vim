@@ -1,2 +1,5 @@
 Plug 'itchyny/lightline.vim'
-let g:airline_theme = 'nord'
+
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }

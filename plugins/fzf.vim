@@ -1,3 +1,4 @@
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 let FZF_DEFAULT_COMMAND='ag -g ""' 
