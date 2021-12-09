@@ -116,6 +116,7 @@ source ~/.config/nvim/plugins/tabular.vim
 source ~/.config/nvim/plugins/tagbar.vim
 source ~/.config/nvim/plugins/terraform.vim
 source ~/.config/nvim/plugins/theme.vim
+source ~/.config/nvim/plugins/treesitter.vim
 
 "runtime plugs.vim
 call plug#end()

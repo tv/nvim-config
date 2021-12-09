@@ -1,3 +1,4 @@
-Plug 'arcticicestudio/nord-vim'
+Plug 'shaunsingh/nord.nvim'
 autocmd User PlugLoaded ++nested colorscheme nord
-let g:nord_cursor_line_number_background = 1
+let g:nord_borders = v:true
+let g:nord_contrast = v:true
