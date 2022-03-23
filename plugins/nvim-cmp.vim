@@ -9,7 +9,13 @@ func! PluginConfig_cmp()
 lua << EOF
 local cmp = require('cmp')
 local lspkind = require('lspkind')
+local luasnip = require('luasnip')
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   mapping = {
    ['<C-n>'] = function(fallback)
       if cmp.visible() then

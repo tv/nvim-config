@@ -17,6 +17,9 @@ require'lspconfig'.pylsp.setup({
 require'lspconfig'.yamlls.setup({
   capabilities = capabilities,
 })
+require'lspconfig'.gopls.setup({
+  capabilities = capabilities,
+})
 
 EOF
 endfunction
