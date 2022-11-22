@@ -7,7 +7,7 @@ let s:uname = system("uname")
 if has ('x') && has ('gui') " On Linux use + register for copy-paste
     set clipboard=unnamedplus
 elseif has('unix')          " If commandline unix
-    set clipboard=unnamed
+    set clipboard=unnamedplus
 elseif has ('gui')          " On mac and Windows, use * register for copy-paste
     set clipboard=unnamed
 endif
