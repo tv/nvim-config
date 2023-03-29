@@ -1,8 +1,9 @@
 Plug 'neovim/nvim-lspconfig'
 
 func! PluginConfig_lsp()
-lua << EOF
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+  lua << EOF
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require('lspconfig')['terraformls'].setup {
   capabilities = capabilities,

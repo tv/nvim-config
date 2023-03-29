@@ -1,0 +1,1 @@
+Plug 'tsandall/vim-rego'

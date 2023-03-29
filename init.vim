@@ -111,6 +111,7 @@ source ~/.config/nvim/plugins/nerdcommenter.vim
 source ~/.config/nvim/plugins/nvim-cmp.vim
 source ~/.config/nvim/plugins/polyglot.vim
 source ~/.config/nvim/plugins/rainbow.vim
+source ~/.config/nvim/plugins/rego.vim
 source ~/.config/nvim/plugins/surround.vim
 source ~/.config/nvim/plugins/tabular.vim
 source ~/.config/nvim/plugins/tagbar.vim
