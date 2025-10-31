@@ -120,6 +120,10 @@ source ~/.config/nvim/plugins/theme.vim
 source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/lua_snip.vim
 
+if filereadable(glob("~/.config/nvim/local.vim"))
+  source ~/.config/nvim/local.vim
+endif
+
 "runtime plugs.vim
 call plug#end()
 doautocmd User PlugLoaded

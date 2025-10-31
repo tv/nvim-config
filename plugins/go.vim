@@ -1,5 +1,7 @@
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } ", { 'for': 'go' }
 
+let g:go_fmt_command="gopls"
+let g:go_gopls_gofumpt=1
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
