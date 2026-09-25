@@ -2,32 +2,21 @@ Plug 'neovim/nvim-lspconfig'
 
 func! PluginConfig_lsp()
   lua << EOF
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require('lspconfig')['terraformls'].setup {
-  capabilities = capabilities,
-}
+vim.lsp.enable('terraformls')
+vim.lsp.enable('dockerls')
+vim.lsp.enable('pylsp')
 
-require('lspconfig')['dockerls'].setup {
-  capabilities = capabilities,
-}
+vim.lsp.config('yamlls', {
+  customTags = {
+    "!input",
+  }
+})
+vim.lsp.enable('yamlls')
 
-require('lspconfig')['pylsp'].setup {
-  capabilities = capabilities,
-}
-
-require('lspconfig')['yamlls'].setup {
-  capabilities = capabilities,
-}
-
-require('lspconfig')['gopls'].setup {
-  capabilities = capabilities,
-}
-
-require('lspconfig')['rust_analyzer'].setup {
-  capabilities = capabilities,
-}
+vim.lsp.enable('dockerls')
+vim.lsp.enable('gopls')
+vim.lsp.enable('rust_analyzer')
 
 EOF
 endfunction

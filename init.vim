@@ -119,6 +119,11 @@ source ~/.config/nvim/plugins/terraform.vim
 source ~/.config/nvim/plugins/theme.vim
 source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/lua_snip.vim
+source ~/.config/nvim/plugins/trouble.vim
+
+" Tailscale hujson / jsonc stuff
+au BufRead,BufNewFile *.hujson set filetype=jsonc
+au FileType jsonc nmap <leader>f :%!hujsonfmt
 
 if filereadable(glob("~/.config/nvim/local.vim"))
   source ~/.config/nvim/local.vim
